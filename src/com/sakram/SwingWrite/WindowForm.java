@@ -103,7 +103,7 @@ public class WindowForm implements ActionListener {
 	private void WriteToFile(boolean addToFile) {
 		Writer write;
 		try {
-			write = new Writer("/Users/seankram/Desktop/swingWritten.txt",
+			write = new Writer("swingWritten.txt",
 					addToFile);									// Here, I call in the Writer class, take the user's above
 			String content = wordField.getText();				// preference into consideration, then store all of the
 			write.addText(content);								// entered text in a String and add it to the file
@@ -117,7 +117,7 @@ public class WindowForm implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			Reader read = new Reader("/Users/seankram/Desktop/swingWritten.txt");
+			Reader read = new Reader("swingWritten.txt");
 			try {
 				String content = read.getText();				// When the user clicks Load, the reverse of the above
 				wordField.setText(content);						// method goes into action, as the contents of the given
